@@ -29,6 +29,8 @@ set_assignment <- function(path, auth_token = NULL){
   assignment_yml_ok(path = temp_file)
   file.copy(from = temp_file, to = dest, overwrite = TRUE)
   assignment <- read_assignment_yml()
+  if("packages" %in% names(assignment))
+    check_installed_packages(assignment$packages)
   message("Assignment set:\n", assignment$name, " : ", assignment$description)
   invisible(dest)
 }
@@ -40,6 +42,8 @@ set_assignment <- function(path, auth_token = NULL){
 #'   Checks if markmyassignment folder exist in R temp directory.
 #'   If not, the folder is created.
 #'   
+#' @keywords internal
+#' 
 temp_folder_check_create <- function() {
   if(!"markmyassignment" %in% dir(tempdir())){
     dir.create(path = mark_my_base_dir())
@@ -56,6 +60,8 @@ temp_folder_check_create <- function() {
 #' 
 #' @return 
 #'   boolean 
+#'   
+#' @keywords internal
 #' 
 assignment_yml_ok <- function(path = NULL){
   assignment <- try(read_assignment_yml(path), silent = TRUE)
@@ -72,10 +78,12 @@ assignment_yml_ok <- function(path = NULL){
 #' 
 #' @return 
 #'   boolean 
+#'   
+#' @keywords internal
 #' 
 check_assignment_file <- function(assignment){
-  # The yml contain at most 4 slots.
-  check <- all(names(assignment) %in% c("name", "description", "reporter", "tasks", "mandatory"))
+  # The yml contain at most 6 slots.
+  check <- all(names(assignment) %in% c("name", "description", "reporter", "tasks", "mandatory", "packages"))
   if(!check) stop("Assignment file contain erroneous parts (except name, desc., reporter, tasks and mandatory.")
   # The name and description is of length 1
   check <- all(unlist(lapply(assignment[c("name", "description")], length)) == 1)
@@ -85,7 +93,7 @@ check_assignment_file <- function(assignment){
   if(inherits(urls, "try-error")) stop("All tasks in assignments file do not contain urls")
   check <- !any(unlist(lapply(lapply(urls, path_type), class)) == "path_error")
   if(!check) stop("Not all tasks in assignments have working urls.")
-
+  
   if("mandatory" %in% names(assignment)) {
     # Check mandatory urls
     urls <- try(as.list(assignment[["mandatory"]]$url), silent = TRUE)
@@ -106,6 +114,8 @@ check_assignment_file <- function(assignment){
 #' @param path Character element of url or local search path.
 #' 
 #' @return path type as character element c("path_local", "path_http", "path_error")
+#' 
+#' @keywords internal
 #' 
 path_type <- function(path){
   if(file.exists(path)){
@@ -134,6 +144,7 @@ path_type <- function(path){
 #' @param ...
 #'   Further arguments to send to \code{httr::GET()}.
 #' 
+#' @keywords internal
 #' 
 get_file <- function(path, dest, ...){
   stopifnot(!inherits(path, "path_error"))
@@ -160,7 +171,8 @@ get_file.path_http <- function(path, dest, ...){
 #' 
 #' @return assignment object
 #' 
-
+#' @keywords internal
+#' 
 read_assignment_yml <- function(path = NULL){
   if(is.null(path)){
     assignment_file <- paste0(mark_my_assignment_dir(), "/assignment1.yml")
@@ -183,9 +195,11 @@ read_assignment_yml <- function(path = NULL){
 #'   Get the name of the tasks in the assignment.
 #'   
 #' @examples
+#' # We first set the assignment
 #' assignment_path <- 
 #'  paste0(system.file(package = "markmyassignment"), "/extdata/example_assignment01.yml")
-#'  set_assignment(assignment_path)
+#' set_assignment(assignment_path)
+#'  
 #' show_tasks()
 #' 
 #' @export
@@ -193,3 +207,32 @@ show_tasks <- function(){
   assignment <- read_assignment_yml()
   names(assignment$task)
 }
+
+
+#' @title
+#'  Check whether required packages are installed and loaded.
+#' 
+#' @description
+#'   Checks if the packages listed in assignment file are loaded and installed.
+#'   If not, a warning message is printed.
+#' @param packages
+#'   Packages to check
+#'   
+#' @keywords internal
+#'   
+check_installed_packages <- function(packages) {
+  
+  if(all(paste("package:", packages, sep="") %in% search())){
+    # All packages are loaded and installed
+  }else{
+    if(all(packages %in% rownames(utils::installed.packages()))){
+      warning("The following packages need to be loaded:\n",
+              paste(packages[!paste("package:", packages, sep="") %in% search()], collapse = ", "))
+    }
+    else{
+      warning("The following packages need to be installed and then loaded:\n",
+              paste(packages[!packages %in% rownames(utils::installed.packages())], collapse=", "))
+    }
+  }
+}
+
