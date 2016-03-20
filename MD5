@@ -1,4 +1,4 @@
-265a5b0e27aabe9a8ccfd13b071df5dd *DESCRIPTION
+ab0a154dec9e38afa91a5839958ff102 *DESCRIPTION
 cadc0e76aa8d5a4e5260c85196bf1dbc *LICENSE
 f8d3c450c2b439fe3b301638d6d9ea2b *NAMESPACE
 8aa399bb290c1896dcdd6ffd78a7788f *R/assertion_funcions.R
@@ -7,12 +7,11 @@ e9fc02f6a675a8c050359ade27e0f9a3 *R/expectations.R
 3104f69c1e690eeaaa42facdd7d09284 *R/mark_my_file.R
 602a6b98de892a8e30d69e9194f65429 *R/markmyassignment.R
 7f13876125e66e3a0ef821e1ff897387 *R/reporter.R
-65747c5db3f20c20e970836b8b6c99d5 *R/set_assignment.R
-d39e15ae16c016560409cfdc90a2f62a *README.md
+a221e8c4aa7d7560f5ce416d71a5c1c6 *R/set_assignment.R
 04ba6e618201953ffda26084bce92304 *build/vignette.rds
 3ab2f2e292509fbc2104c50e4fb1a960 *inst/doc/markmyassignment.R
 9938856e3f226401b67a840b0fd389a7 *inst/doc/markmyassignment.Rmd
-d6fe7e4465861a4b85781a28d7ac45dc *inst/doc/markmyassignment.html
+d5dc0ebf2eb7aa1d3e95a100edb3866c *inst/doc/markmyassignment.html
 b27547543a784c68e9831db4b5bfb44d *inst/extdata/example_assignment01.yml
 39d09e54a2be555156c60ab7b5ec923a *inst/extdata/example_assignment02.yml
 c38264cfeae27d548a1f68fb8540b075 *inst/extdata/example_assignment03.yml
@@ -65,7 +64,7 @@ be4efd65971c98ee312ecdd4b2c4d227 *man/set_assignment.Rd
 4e40b9b9c7c9994da38f697fb0993765 *man/use_package.Rd
 e95a4833f484cfe50a8e40598760de82 *tests/testthat.R
 f0e5585d235f4f7a7dd218fb138fc76f *tests/testthat/test-expectation.R
-1a475685384b80be367bae24ab91ff43 *tests/testthat/test-mark_my_assignment.R
-da58822f8c217e51aa4c83aa1d7c155f *tests/testthat/test-mark_my_file.R
-a3da0edc531909185dfa269dc52c1b6c *tests/testthat/test-set_assignment.R
+97ba4f4300b9f0efd269edf063d168d9 *tests/testthat/test-mark_my_assignment.R
+b5c8ad6fbbbf16755ff558e16e8f9f0f *tests/testthat/test-mark_my_file.R
+517e61f427441d75aced27797662db26 *tests/testthat/test-set_assignment.R
 9938856e3f226401b67a840b0fd389a7 *vignettes/markmyassignment.Rmd
