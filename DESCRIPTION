@@ -1,8 +1,8 @@
 Package: markmyassignment
 Type: Package
 Title: Automatic Marking of R Assignments
-Version: 0.6.0
-Date: 2016-04-15
+Version: 0.6.1
+Date: 2016-08-15
 Author: Mans Magnusson, Oscar Pettersson
 Maintainer: Mans Magnusson <mons.magnusson@gmail.com>
 Description: Automatic marking of R assignments for students and teachers based
@@ -17,6 +17,6 @@ VignetteBuilder: knitr
 Collate: 'assertion_funcions.R' 'expectations.R' 'mark_my_assignment.R'
         'mark_my_file.R' 'markmyassignment.R' 'set_assignment.R'
 NeedsCompilation: no
-Packaged: 2016-04-15 18:31:15 UTC; manma97
+Packaged: 2016-08-15 18:24:23 UTC; manma97
 Repository: CRAN
-Date/Publication: 2016-04-16 04:47:22
+Date/Publication: 2016-08-16 00:24:49
