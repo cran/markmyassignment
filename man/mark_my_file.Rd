@@ -4,8 +4,8 @@
 \alias{mark_my_file}
 \title{Mark assignment file}
 \usage{
-mark_my_file(tasks = NULL, mark_file = file.choose(), assignment_path,
-  force_get_tests = FALSE, quiet = FALSE, reporter)
+mark_my_file(tasks = NULL, mark_file = file.choose(),
+  assignment_path = NULL, force_get_tests = FALSE, quiet = FALSE, ...)
 }
 \arguments{
 \item{tasks}{Which task should be corrected (if more than one). Default is all. 
@@ -15,11 +15,11 @@ To see the different task, see \code{\link{show_tasks}}.}
 
 \item{assignment_path}{Assignment file to set before marking the assignment (url or local path).}
 
-\item{force_get_tests}{Force download of test files before marking of assignments. Default is FALSE.}
+\item{force_get_tests}{Argument is deprecated, use \code{set_assignment()} instead.}
 
 \item{quiet}{Should test be run without output?}
 
-\item{reporter}{to use. Default is the 'summary' or specified in assignment yml file.}
+\item{...}{further arguments sent to \code{test_dir()}.}
 }
 \description{
 Mark a specific assignment file
@@ -31,4 +31,3 @@ file_path <- paste0(system.file(package = "markmyassignment"), "/extdata/example
 mark_my_file(mark_file = file_path, assignment_path = assignment_path)
 
 }
-

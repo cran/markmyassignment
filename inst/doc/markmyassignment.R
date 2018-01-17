@@ -7,7 +7,7 @@
 ## ---- message=FALSE------------------------------------------------------
 library(markmyassignment)
 
-## ---- message=FALSE------------------------------------------------------
+## ---- message=TRUE-------------------------------------------------------
 assignment_path <- 
  paste0(system.file(package = "markmyassignment"), "/extdata/example_assignment01.yml")
 set_assignment(assignment_path)
@@ -23,11 +23,10 @@ print(task1)
 mark_my_assignment()
 
 ## ------------------------------------------------------------------------
-my_name <- "Foo Bar"
-mark_my_assignment()
+mark_my_assignment(tasks = "task1")
 
 ## ------------------------------------------------------------------------
-mark_my_assignment(tasks = "task1")
+my_name <- "SkyNet"
 
 ## ------------------------------------------------------------------------
 task2 <- function(vector){
@@ -37,9 +36,6 @@ task2(1:5)
 
 ## ------------------------------------------------------------------------
 mark_my_assignment(tasks = "task2")
-
-## ------------------------------------------------------------------------
-task2(5:10)
 
 ## ------------------------------------------------------------------------
 task2 <- function(vector){
@@ -53,6 +49,10 @@ mark_my_assignment()
 
 ## ------------------------------------------------------------------------
 mark_file <- paste0(system.file(package = "markmyassignment"), "/extdata/example_lab_file.R")
+
+assignment_path <- 
+ paste0(system.file(package = "markmyassignment"), "/extdata/example_assignment01.yml")
+
 mark_my_file(mark_file = mark_file, assignment_path = assignment_path)
 
 ## ---- eval=FALSE---------------------------------------------------------

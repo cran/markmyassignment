@@ -5,7 +5,7 @@
 \title{Mark assignment in global environment}
 \usage{
 mark_my_assignment(tasks = NULL, mark_file = NULL,
-  force_get_tests = FALSE, quiet = FALSE, reporter = NULL)
+  force_get_tests = FALSE, quiet = FALSE, ...)
 }
 \arguments{
 \item{tasks}{Which task should be corrected (if more than one). Default is all. 
@@ -13,21 +13,20 @@ To see the different task, see \code{\link{show_tasks}}.}
 
 \item{mark_file}{Argument is deprecated, use mark_my_file instead.}
 
-\item{force_get_tests}{Force download of test files before marking of assignments. Default is FALSE.}
+\item{force_get_tests}{Argument is deprecated, use \code{set_assignment()} instead.}
 
 \item{quiet}{Should test be run without output?}
 
-\item{reporter}{to use. Default is the 'summary' or specified in assignment yml file.}
+\item{...}{further arguments sent to \code{test_dir()}.}
 }
 \description{
 Mark assignment in global environment.
 }
 \examples{
 assignment_path <- 
- paste0(system.file(package = "markmyassignment"), "/extdata/example_assignment01.yml")
+  file.path(system.file(package = "markmyassignment"), "extdata", "example_assignment01.yml")
 set_assignment(assignment_path)
-source(paste0(system.file(package = "markmyassignment"), "/extdata/example_lab_file.R"))
+source(file.path(system.file(package = "markmyassignment"), "extdata", "example_lab_file.R"))
 mark_my_assignment()
 
 }
-
