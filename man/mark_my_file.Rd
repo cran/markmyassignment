@@ -5,7 +5,8 @@
 \title{Mark assignment file}
 \usage{
 mark_my_file(tasks = NULL, mark_file = file.choose(),
-  assignment_path = NULL, force_get_tests = FALSE, quiet = FALSE, ...)
+  assignment_path = NULL, force_get_tests = FALSE, quiet = FALSE,
+  ...)
 }
 \arguments{
 \item{tasks}{Which task should be corrected (if more than one). Default is all. 
@@ -25,9 +26,10 @@ To see the different task, see \code{\link{show_tasks}}.}
 Mark a specific assignment file
 }
 \examples{
+\dontrun{
 assignment_path <- 
-  paste0(system.file(package = "markmyassignment"), "/extdata/example_assignment01.yml")
-file_path <- paste0(system.file(package = "markmyassignment"), "/extdata/example_lab_file.R")
+  file.path(system.file(package = "markmyassignment"), "extdata", "example_assignment01.yml")
+file_path <- file.path(system.file(package = "markmyassignment"), "extdata", "example_lab_file.R")
 mark_my_file(mark_file = file_path, assignment_path = assignment_path)
-
+}
 }

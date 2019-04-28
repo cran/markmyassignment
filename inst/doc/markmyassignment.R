@@ -9,7 +9,7 @@ library(markmyassignment)
 
 ## ---- message=TRUE-------------------------------------------------------
 assignment_path <- 
- paste0(system.file(package = "markmyassignment"), "/extdata/example_assignment01.yml")
+ file.path(system.file(package = "markmyassignment"), "extdata", "example_assignment01.yml")
 set_assignment(assignment_path)
 
 ## ------------------------------------------------------------------------
@@ -48,10 +48,10 @@ ls()
 mark_my_assignment()
 
 ## ------------------------------------------------------------------------
-mark_file <- paste0(system.file(package = "markmyassignment"), "/extdata/example_lab_file.R")
+mark_file <- file.path(system.file(package = "markmyassignment"), "extdata", "example_lab_file.R")
 
 assignment_path <- 
- paste0(system.file(package = "markmyassignment"), "/extdata/example_assignment01.yml")
+ file.path(system.file(package = "markmyassignment"), "extdata", "example_assignment01.yml")
 
 mark_my_file(mark_file = mark_file, assignment_path = assignment_path)
 

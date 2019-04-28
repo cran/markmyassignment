@@ -12,7 +12,7 @@
 
 <meta name="author" content="Mans Magnusson and Oscar Pettersson" />
 
-<meta name="date" content="2018-01-17" />
+<meta name="date" content="2019-04-28" />
 
 <title>A student’s introduction to markmyassignment</title>
 
@@ -70,7 +70,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">A student’s introduction to markmyassignment</h1>
 <h4 class="author"><em>Mans Magnusson and Oscar Pettersson</em></h4>
-<h4 class="date"><em>2018-01-17</em></h4>
+<h4 class="date"><em>2019-04-28</em></h4>
 
 
 
@@ -92,7 +92,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(markmyassignment)</code></pre></div>
 <p>Then, use <code>set_assignment()</code> with the path provided by the teacher. Below you will find an example assignment that is part of the <code>markmyassignment</code> package. The assignment path of this example assignment depends on the local R installation.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">assignment_path &lt;-<span class="st"> </span>
-<span class="st"> </span><span class="kw">paste0</span>(<span class="kw">system.file</span>(<span class="dt">package =</span> <span class="st">&quot;markmyassignment&quot;</span>), <span class="st">&quot;/extdata/example_assignment01.yml&quot;</span>)
+<span class="st"> </span><span class="kw">file.path</span>(<span class="kw">system.file</span>(<span class="dt">package =</span> <span class="st">&quot;markmyassignment&quot;</span>), <span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;example_assignment01.yml&quot;</span>)
 <span class="kw">set_assignment</span>(assignment_path)</code></pre></div>
 <pre><code>## Assignment set:
 ## Test assignment 01: An example of an assignment.
@@ -128,40 +128,40 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 ⠋ |  0 1     | task2a
 ⠙ |  0 2     | task2a
 ✖ |  0 2     | task2a
-## ──────────────────────────────────────────────────────
+## ───────────────────────────────────────────────────────────
 ## test-2-1.R:6: failure: Marking task2
 ## exists(&quot;task2&quot;) isn't true.
 ## task2() does not exist.
 ## 
 ## test-2-1.R:7: error: Marking task2
 ## object 'task2' not found
-## 1: expect_is(task2, &quot;function&quot;, info = &quot;task2 is not a function.&quot;) at /var/folders/9h/yf354vb917z6gr6mz7bfb1d40000gn/T//RtmpAcidgn/markmyassignment/assignment1/tasks/test-2-1.R:7
+## 1: expect_is(task2, &quot;function&quot;, info = &quot;task2 is not a function.&quot;) at /var/folders/9h/yf354vb917z6gr6mz7bfb1d40000gn/T//RtmpxHCTmc/markmyassignment/assignment1/tasks/test-2-1.R:7
 ## 2: quasi_label(enquo(object), label)
 ## 3: eval_bare(get_expr(quo), get_env(quo))
-## ──────────────────────────────────────────────────────
+## ───────────────────────────────────────────────────────────
 ## 
 ⠏ |  0       | task2b
 ⠋ |  0 1     | task2b
 ✖ |  0 1     | task2b
-## ──────────────────────────────────────────────────────
+## ───────────────────────────────────────────────────────────
 ## test-2-2.R:6: error: Mark even more on task2
 ## could not find function &quot;task2&quot;
-## 1: expect_is(task2(5:10), &quot;integer&quot;, info = &quot;task2 don't return an integer.&quot;) at /var/folders/9h/yf354vb917z6gr6mz7bfb1d40000gn/T//RtmpAcidgn/markmyassignment/assignment1/tasks/test-2-2.R:6
+## 1: expect_is(task2(5:10), &quot;integer&quot;, info = &quot;task2 don't return an integer.&quot;) at /var/folders/9h/yf354vb917z6gr6mz7bfb1d40000gn/T//RtmpxHCTmc/markmyassignment/assignment1/tasks/test-2-2.R:6
 ## 2: quasi_label(enquo(object), label)
 ## 3: eval_bare(get_expr(quo), get_env(quo))
-## ──────────────────────────────────────────────────────
+## ───────────────────────────────────────────────────────────
 ## 
 ⠏ |  0       | Mandatory tests
 ⠋ |  0 1     | Mandatory tests
 ✖ |  0 1     | Mandatory tests
-## ──────────────────────────────────────────────────────
+## ───────────────────────────────────────────────────────────
 ## test-mandatory-1.R:6: failure: Mandatory tests
 ## exists(&quot;my_name&quot;) isn't true.
 ## Variable my_name is missing
-## ──────────────────────────────────────────────────────
+## ───────────────────────────────────────────────────────────
 ## 
-## ══ Results ═══════════════════════════════════════════
-## Duration: 0.3 s
+## ══ Results ════════════════════════════════════════════════
+## Duration: 0.1 s
 ## 
 ## OK:       3
 ## Failed:   4
@@ -186,13 +186,13 @@ task2() does not exist.</code></pre>
 ⠏ |  0       | Mandatory tests
 ⠋ |  0 1     | Mandatory tests
 ✖ |  0 1     | Mandatory tests
-## ──────────────────────────────────────────────────────
+## ───────────────────────────────────────────────────────────
 ## test-mandatory-1.R:6: failure: Mandatory tests
 ## exists(&quot;my_name&quot;) isn't true.
 ## Variable my_name is missing
-## ──────────────────────────────────────────────────────
+## ───────────────────────────────────────────────────────────
 ## 
-## ══ Results ═══════════════════════════════════════════
+## ══ Results ════════════════════════════════════════════════
 ## OK:       3
 ## Failed:   1
 ## Warnings: 0
@@ -225,19 +225,19 @@ Variable my_name is missing</code></pre>
 ⠹ |  2 1     | task2b
 ⠸ |  3 1     | task2b
 ✖ |  3 1     | task2b
-## ──────────────────────────────────────────────────────
+## ───────────────────────────────────────────────────────────
 ## test-2-2.R:8: failure: Mark even more on task2
 ## task2(vector = 5:10) not equal to 15.
 ## 1/1 mismatches
 ## [1] 14 - 15 == -1
 ## task2(vector=5:10) don't return 15
-## ──────────────────────────────────────────────────────
+## ───────────────────────────────────────────────────────────
 ## 
 ⠏ |  0       | Mandatory tests
 ⠋ |  1       | Mandatory tests
 ✔ |  1       | Mandatory tests
 ## 
-## ══ Results ═══════════════════════════════════════════
+## ══ Results ════════════════════════════════════════════════
 ## OK:       7
 ## Failed:   1
 ## Warnings: 0
@@ -266,7 +266,7 @@ Variable my_name is missing</code></pre>
 ⠋ |  1       | Mandatory tests
 ✔ |  1       | Mandatory tests
 ## 
-## ══ Results ═══════════════════════════════════════════
+## ══ Results ════════════════════════════════════════════════
 ## OK:       8
 ## Failed:   0
 ## Warnings: 0
@@ -301,7 +301,7 @@ Variable my_name is missing</code></pre>
 ⠋ |  1       | Mandatory tests
 ✔ |  1       | Mandatory tests
 ## 
-## ══ Results ═══════════════════════════════════════════
+## ══ Results ════════════════════════════════════════════════
 ## OK:       11
 ## Failed:   0
 ## Warnings: 0
@@ -309,10 +309,10 @@ Variable my_name is missing</code></pre>
 ## Keep up the good work!</code></pre>
 <p>Yay! We have completed the whole lab assignment!</p>
 <p>If we save our file now, we could even clean the global environment and run the tests on the assignment file we will turn in. This is also what the teacher will do when correcting the labs (but probably with some extra tests). We need both the file path to our file and the assignment path that we used to <code>set_assignment()</code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mark_file &lt;-<span class="st"> </span><span class="kw">paste0</span>(<span class="kw">system.file</span>(<span class="dt">package =</span> <span class="st">&quot;markmyassignment&quot;</span>), <span class="st">&quot;/extdata/example_lab_file.R&quot;</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">mark_file &lt;-<span class="st"> </span><span class="kw">file.path</span>(<span class="kw">system.file</span>(<span class="dt">package =</span> <span class="st">&quot;markmyassignment&quot;</span>), <span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;example_lab_file.R&quot;</span>)
 
 assignment_path &lt;-<span class="st"> </span>
-<span class="st"> </span><span class="kw">paste0</span>(<span class="kw">system.file</span>(<span class="dt">package =</span> <span class="st">&quot;markmyassignment&quot;</span>), <span class="st">&quot;/extdata/example_assignment01.yml&quot;</span>)
+<span class="st"> </span><span class="kw">file.path</span>(<span class="kw">system.file</span>(<span class="dt">package =</span> <span class="st">&quot;markmyassignment&quot;</span>), <span class="st">&quot;extdata&quot;</span>, <span class="st">&quot;example_assignment01.yml&quot;</span>)
 
 <span class="kw">mark_my_file</span>(<span class="dt">mark_file =</span> mark_file, <span class="dt">assignment_path =</span> assignment_path)</code></pre></div>
 <pre><code>## ✔ | OK F W S | Context
@@ -340,12 +340,12 @@ assignment_path &lt;-<span class="st"> </span>
 ⠋ |  1       | Mandatory tests
 ✔ |  1       | Mandatory tests
 ## 
-## ══ Results ═══════════════════════════════════════════
+## ══ Results ════════════════════════════════════════════════
 ## OK:       11
 ## Failed:   0
 ## Warnings: 0
 ## Skipped:  0
-## Yay! All done!</code></pre>
+## You're a coding rockstar!</code></pre>
 <p>It is also possible to just specify the assignment path and then choose the assignment file as follows:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mark_my_file</span>(<span class="dt">assignment_path =</span> assignment_path)</code></pre></div>
 <p>We could also check individual tasks in our file, similar to before:</p>
@@ -362,7 +362,7 @@ assignment_path &lt;-<span class="st"> </span>
 ⠋ |  1       | Mandatory tests
 ✔ |  1       | Mandatory tests
 ## 
-## ══ Results ═══════════════════════════════════════════
+## ══ Results ════════════════════════════════════════════════
 ## OK:       4
 ## Failed:   0
 ## Warnings: 0

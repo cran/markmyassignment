@@ -38,7 +38,7 @@ mark_my_assignment <- function(tasks = NULL, mark_file = NULL, force_get_tests =
   
   # Run test suites 
   if(quiet){
-    capture_output(test_results <- suppressMessages(run_test_suite(caller = "mark_my_assignment", tasks, mark_file, quiet, ...)))
+    testthat::capture_output(test_results <- suppressMessages(run_test_suite(caller = "mark_my_assignment", tasks, mark_file, quiet, ...)))
   } else {
     test_results <- run_test_suite(caller = "mark_my_assignment", tasks, mark_file, quiet, ...)
   }
@@ -112,10 +112,10 @@ run_test_suite <- function(caller, tasks = NULL, mark_file = NULL, quiet = FALSE
   before_paths <- file.path(mark_my_run_code_dir(), run_code_paths[grepl("before",run_code_paths)])
   for(i in seq_along(before_paths)) source(file = before_paths[i], local = mark_my_env)
     
-  test_res <- test_dir(path = test_directory, 
-                       filter = tasks_filter, 
-                       env = mark_my_env,
-                       ...)
+  test_res <- testthat::test_dir(path = test_directory, 
+                                 filter = tasks_filter, 
+                                 env = mark_my_env,
+                                 ...)
   
   # Source in after code
   after_paths <- file.path(mark_my_run_code_dir(), run_code_paths[grepl("after",run_code_paths)])
