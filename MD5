@@ -1,4 +1,4 @@
-a15d4950b4001dc89bd9bb709bf5f099 *DESCRIPTION
+6daa6e05d8da24d933e7ef383f94ec94 *DESCRIPTION
 cadc0e76aa8d5a4e5260c85196bf1dbc *LICENSE
 e956def95c6534dd976c0f106279d144 *NAMESPACE
 dbe545f92b82459b7921ffab4f70f31e *R/expectations.R
@@ -7,14 +7,14 @@ dbe545f92b82459b7921ffab4f70f31e *R/expectations.R
 d66d9b44292ef1cd395c0269d4e1ed80 *R/mark_my_dir.R
 b583f5fcf26079277928824b49aec7b0 *R/mark_my_file.R
 c74602d94ed27beb975375a37498025d *R/markmyassignment.R
-ee5c8e58b298638465dcc04c77972db6 *R/set_assignment.R
+8b503ba33b798d438a9c1428240dea26 *R/set_assignment.R
 5b0b03ec203e2dae26feb6c690f78f29 *build/vignette.rds
 f4b04bb60cf698174524c34dbb8e5349 *inst/doc/markmyassignment-teacher.R
 5eeb1ac52c7f5e7e23538ef6bfd98483 *inst/doc/markmyassignment-teacher.Rmd
-9fb958f18be166ea15b85f09bec59834 *inst/doc/markmyassignment-teacher.html
+05119a096a7881e65217a546b1f9b1bb *inst/doc/markmyassignment-teacher.html
 1b0fe43544b339ea442899cff37be487 *inst/doc/markmyassignment.R
 832fd5b9c5f2fabb002c2ffdd22ac986 *inst/doc/markmyassignment.Rmd
-1b8b73210ec1e550419aefcc017b1cd3 *inst/doc/markmyassignment.html
+43c538a0ec406b4911d8eab3c44fa98e *inst/doc/markmyassignment.html
 e67fa3db8a3342ee0a8191393e6150d3 *inst/extdata/assignment_template.yml
 93fb65116b0696d01013fd7adeb9c0fc *inst/extdata/example_assignment01.yml
 de6fae8093837638bd8b8e92dc6cb322 *inst/extdata/example_assignment02.yml
@@ -72,7 +72,7 @@ d05a361126981b74e5fc3b02c98fe070 *man/markmyassignment.Rd
 96e18dbf320ed8e84cd865fdba55b3d5 *man/path_type.Rd
 2f8aeca6aab48ef27197a2368f7d7510 *man/read_assignment_yml.Rd
 6a43d36ac594aac6bb8629e9bce197f0 *man/run_test_suite.Rd
-62c067651b10ff6014d016b973e9211d *man/set_assignment.Rd
+499144628481ec522356a0cf55afaeb3 *man/set_assignment.Rd
 24e19f9558f8ec055f078291889184c5 *man/show_tasks.Rd
 eda3fb7e88a2d0e56e8c5e5c4dc3ac6e *man/temp_folder_check_create.Rd
 5ba6c5cedd5955efee87461b0e5f9777 *man/translate_tasks_name_to_task_files.Rd
