@@ -1,13 +1,13 @@
-## ---- message=FALSE, eval=FALSE-----------------------------------------------
-#  install.packages("markmyassignment")
+## ----message=FALSE, eval=FALSE------------------------------------------------
+# install.packages("markmyassignment")
 
-## ---- message=FALSE, eval=FALSE-----------------------------------------------
-#  help(package = "markmyassignment")
+## ----message=FALSE, eval=FALSE------------------------------------------------
+# help(package = "markmyassignment")
 
-## ---- message=FALSE-----------------------------------------------------------
+## ----message=FALSE------------------------------------------------------------
 library(markmyassignment)
 
-## ---- message=TRUE------------------------------------------------------------
+## ----message=TRUE-------------------------------------------------------------
 assignment_path <- 
  file.path(system.file(package = "markmyassignment"), "extdata", "example_assignment01.yml")
 set_assignment(assignment_path)
@@ -55,8 +55,8 @@ assignment_path <-
 
 mark_my_file(mark_file = mark_file, assignment_path = assignment_path)
 
-## ---- eval=FALSE--------------------------------------------------------------
-#  mark_my_file(assignment_path = assignment_path)
+## ----eval=FALSE---------------------------------------------------------------
+# mark_my_file(assignment_path = assignment_path)
 
 ## -----------------------------------------------------------------------------
 mark_my_file(tasks = "task1", mark_file = mark_file, assignment_path = assignment_path)

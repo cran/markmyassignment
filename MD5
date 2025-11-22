@@ -1,4 +1,4 @@
-c8360e2253c4fdb38711edc7fcff727f *DESCRIPTION
+dfcc10676a2ed5ed8cccfbd87241ca6e *DESCRIPTION
 cadc0e76aa8d5a4e5260c85196bf1dbc *LICENSE
 e956def95c6534dd976c0f106279d144 *NAMESPACE
 dbe545f92b82459b7921ffab4f70f31e *R/expectations.R
@@ -6,15 +6,15 @@ dbe545f92b82459b7921ffab4f70f31e *R/expectations.R
 23c93a8e347f183b97ac41a4bc831a7e *R/mark_my_assignment.R
 3d680602f1625f4d3f61a7201648cbbd *R/mark_my_dir.R
 b583f5fcf26079277928824b49aec7b0 *R/mark_my_file.R
-c74602d94ed27beb975375a37498025d *R/markmyassignment.R
+2415e3ffa39f6b81e9e7cb4a9ca11956 *R/markmyassignment-package.R
 959b75dce5186c4591d97d17a2ff60e9 *R/set_assignment.R
-1b019e20f91f25c9e8352113c0aca873 *build/vignette.rds
-f4b04bb60cf698174524c34dbb8e5349 *inst/doc/markmyassignment-teacher.R
+6e64c72641efafaae023a1ccadb69a42 *build/vignette.rds
+468240c90498e94d6905b0268454afe3 *inst/doc/markmyassignment-teacher.R
 c17137a3ad1b80bf83ad2e2c63244169 *inst/doc/markmyassignment-teacher.Rmd
-8c5b49df051a14a16b39400a6eb08495 *inst/doc/markmyassignment-teacher.html
-1b0fe43544b339ea442899cff37be487 *inst/doc/markmyassignment.R
+0b75cc490acf8da81d114c9179106520 *inst/doc/markmyassignment-teacher.html
+e488aa45779c02a48c3a66c60f42f3bf *inst/doc/markmyassignment.R
 832fd5b9c5f2fabb002c2ffdd22ac986 *inst/doc/markmyassignment.Rmd
-7551b8bfc953ee7f463e2ac16b81b4b2 *inst/doc/markmyassignment.html
+0a5bc386fc35a493fc586e8046e0ab45 *inst/doc/markmyassignment.html
 e67fa3db8a3342ee0a8191393e6150d3 *inst/extdata/assignment_template.yml
 ad61645e0ebbc4cfcb65b5ed0324d7b4 *inst/extdata/example_assignment01.yml
 de6fae8093837638bd8b8e92dc6cb322 *inst/extdata/example_assignment02.yml
@@ -68,7 +68,7 @@ aee1d46e0e98138f3548bc6a95360127 *man/get_file.Rd
 14ab34cdc290bce415a8246c753754ce *man/mark_my_assignment.Rd
 d9c5caaa613db9f0b5d6e570962e7f68 *man/mark_my_dir.Rd
 f79f4e6c278b1a5748d4041ade5ca17d *man/mark_my_file.Rd
-d05a361126981b74e5fc3b02c98fe070 *man/markmyassignment.Rd
+19fd811414375348cef07ff8e052983a *man/markmyassignment-package.Rd
 08f112b5ac1063333f6e69749fc27fb4 *man/path_type.Rd
 13506e75435259374ccf87184326e6f0 *man/read_assignment_yml.Rd
 6a43d36ac594aac6bb8629e9bce197f0 *man/run_test_suite.Rd
@@ -79,7 +79,7 @@ eda3fb7e88a2d0e56e8c5e5c4dc3ac6e *man/temp_folder_check_create.Rd
 b54f5234d48d37f1bc2d5f0d00a130bc *man/write_assignment_yml.Rd
 e95a4833f484cfe50a8e40598760de82 *tests/testthat.R
 e6a0de0007c123bc74fc36a0fc6a419b *tests/testthat/setup.R
-20bfbad0a3dc84bf76a7050da9b3bf21 *tests/testthat/test-expectation.R
+ec7f489bcbc5e61cffddac19afe032c5 *tests/testthat/test-expectation.R
 12cc75af65a2571e6264b451471c9241 *tests/testthat/test-github.R
 6c737100e77b25e6e8ee7039793b39e0 *tests/testthat/test-mark_my_assignment.R
 0afc8615148fc0386a30e39a22f42b56 *tests/testthat/test-mark_my_dir.R
